@@ -1,0 +1,14 @@
+.trades th,
+.trades td {
+  text-align: center;
+}
+
+.hiddenOnMobile {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .hiddenOnMobile {
+    display: table-cell;
+  }
+}

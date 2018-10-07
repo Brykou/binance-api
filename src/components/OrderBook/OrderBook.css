@@ -1,0 +1,25 @@
+.orderBook {
+  margin-top: 20px;
+}
+
+.asks,
+.bids {
+  margin-bottom: 1.5rem;
+}
+
+.asks th,
+.asks td,
+.bids th,
+.bids td {
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  .orderBook {
+    display: flex;
+    justify-content: space-around;
+  }
+  .bids {
+    margin-right: 20px;
+  }
+}

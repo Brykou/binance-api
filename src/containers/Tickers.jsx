@@ -1,13 +1,13 @@
 import { connect } from "react-redux";
 import Tickers from "../components/Tickers";
-import { changeCurrentSymbol } from "../actions";
+import { selectSymbol } from "../actions";
 
 const mapStateToProps = state => ({
   symbols: state.symbols
 });
 
 const mapDispatchToProps = dispatch => ({
-  onClick: id => dispatch(changeCurrentSymbol(id))
+  onClick: id => dispatch(selectSymbol(id))
 });
 
 export default connect(

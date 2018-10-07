@@ -14,7 +14,7 @@ class Tickers extends React.Component {
     return (
       <ul className="symbols">
         {symbols.map(symbol => (
-          <li key={symbol} onClick={() => onClick(symbol)}>
+          <li key={symbol} onClick={() => onClick(symbol)} className="symbol">
             {symbol}
           </li>
         ))}
