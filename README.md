@@ -1,11 +1,18 @@
-# Binance API on regular endpoints
+# Binance tickers using regular API
 
-Display Binance tickers, order books, and tarde history using regular endpoints.
+Display Binance tickers, order books, and trade history using regular endpoints.
+
+![Demo](demo.gif)
 
 ## Stack
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-[Redux](https://redux.js.org/) is used for global state management. [Express](https://expressjs.com/fr/) is used to create a proxy server.
+
+[Redux](https://redux.js.org/) is used for global state management.
+
+[Express](https://expressjs.com/fr/) is used to create a proxy server.
+
+[Bulma](https://bulma.io/) is used for styling.
 
 ## How to run ?
 
