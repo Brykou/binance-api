@@ -14,6 +14,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 [Bulma](https://bulma.io/) is used for styling.
 
+[Enzyme](https://github.com/airbnb/enzyme) is used for components testing.
+
 ## How to run ?
 
 Binance API CORS don't allow to request endpoints from the browser. This is why there is a proxy server which broadcast calls to Binance API.
