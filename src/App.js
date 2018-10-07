@@ -1,16 +1,18 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import Tickers from "./containers/Tickers";
 import "./App.css";
 
 class App extends Component {
   render() {
-    return (
-      <div className="App">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
+    const { currentSymbol } = this.props;
+    return <div>{currentSymbol ? null : <Tickers />}</div>;
   }
 }
 
-export default App;
+export default connect(
+  state => ({
+    currentSymbol: state.currentSymbol
+  }),
+  null
+)(App);
