@@ -10,7 +10,7 @@ import {
 export function fetchSymbols() {
   return function(dispatch) {
     return axios
-      .get("https://api.binance.com/api/v1/exchangeInfo")
+      .get("http://localhost:3100/tickers")
       .then(response => {
         const symbols = _.map(response.data.symbols, "symbol");
         dispatch({
@@ -45,7 +45,7 @@ export function selectSymbol(symbol) {
 export function fetchOrderBook(symbol) {
   return function(dispatch) {
     return axios
-      .get(`https://api.binance.com/api/v1/depth?symbol=${symbol}&limit=10`)
+      .get(`http://localhost:3100/depth/${symbol}/10`)
       .then(response => {
         const { bids, asks } = response.data;
         dispatch({
@@ -62,7 +62,7 @@ export function fetchOrderBook(symbol) {
 export function fetchTradeHistory(symbol) {
   return function(dispatch) {
     return axios
-      .get(`https://api.binance.com/api/v1/trades?symbol=${symbol}&limit=10`)
+      .get(`http://localhost:3100/trades/${symbol}/10`)
       .then(response => {
         const trades = _.map(response.data, trade => {
           return {
