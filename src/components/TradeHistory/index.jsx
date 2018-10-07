@@ -15,6 +15,9 @@ class TradeHistory extends React.Component {
 
   render() {
     const { trades } = this.props;
+    if (trades.length === 0) {
+      return null;
+    }
     return (
       <table className="table is-bordered is-striped is-fullwidth trades">
         <thead>

@@ -3,6 +3,7 @@ import _ from "lodash";
 import {
   FETCH_SYMBOL_SUCCESS,
   CHANGE_SYMBOL,
+  RESET_SYMBOL,
   UPDATE_ORDER_BOOK,
   UPDATE_TRADE_HISTORY
 } from "./constants";
@@ -26,7 +27,7 @@ export function fetchSymbols() {
 
 export function resetSymbol() {
   return {
-    type: CHANGE_SYMBOL,
+    type: RESET_SYMBOL,
     payload: null
   };
 }

@@ -1,6 +1,7 @@
 import {
   FETCH_SYMBOL_SUCCESS,
   CHANGE_SYMBOL,
+  RESET_SYMBOL,
   UPDATE_ORDER_BOOK,
   UPDATE_TRADE_HISTORY
 } from "../actions/constants";
@@ -21,6 +22,12 @@ export default (state = initialState, action) => {
     case CHANGE_SYMBOL:
       return Object.assign({}, state, {
         currentSymbol: action.payload
+      });
+    case RESET_SYMBOL:
+      return Object.assign({}, state, {
+        currentSymbol: null,
+        orderBook: null,
+        trades: null
       });
     case UPDATE_ORDER_BOOK:
       return Object.assign({}, state, {
